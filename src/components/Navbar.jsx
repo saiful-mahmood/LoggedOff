@@ -29,7 +29,7 @@ export default function Navbar() {
               />
               <path 
                 className="logo-ekg"
-                d="M 5 65 L 35 65 L 45 35 L 55 90 L 65 50 L 70 65 L 95 65" 
+                d="M 18 65 L 35 65 L 44 42 L 53 85 L 61 52 L 67 65 L 82 65" 
                 stroke="#ff6b35" 
                 strokeWidth="5" 
                 strokeLinecap="round"
@@ -127,18 +127,31 @@ export default function Navbar() {
         }
         
         .logo:hover .logo-ekg { 
-          animation: pulse-ekg 0.8s ease-in-out infinite alternate;
+          animation: pulse-ekg 1.2s infinite;
         }
         
         @keyframes pulse-ekg {
-          0% { 
+          0%, 100% { 
             filter: drop-shadow(0 0 4px rgba(255,107,53,0.6)); 
             stroke-width: 5;
+            transform: scale(1);
           }
-          100% { 
-            filter: drop-shadow(0 0 12px rgba(255,107,53,1)); 
+          15% { 
+            filter: drop-shadow(0 0 10px rgba(255,107,53,0.9)); 
             stroke-width: 6;
             stroke: #ff4d00;
+            transform: scale(1.05);
+          }
+          30% { 
+            filter: drop-shadow(0 0 4px rgba(255,107,53,0.6)); 
+            stroke-width: 5;
+            transform: scale(1);
+          }
+          45% { 
+            filter: drop-shadow(0 0 15px rgba(255,107,53,1)); 
+            stroke-width: 6.5;
+            stroke: #ff3300;
+            transform: scale(1.1);
           }
         }
         

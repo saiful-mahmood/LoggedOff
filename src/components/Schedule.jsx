@@ -54,11 +54,34 @@ export default function Schedule() {
             ))}
           </div>
           
-          <div className="safety-bar glass text-center">
+          <div className="safety-bar glass text-center mb-4">
             <div className="safety-icon"><ShieldCheck size={36} className="text-accent" /></div>
             <div className="safety-text">
               <h4 className="heading-md" style={{fontSize: '1.5rem'}}>Secure Protocol</h4>
               <p>Our retreats lead with highly trained offline staff, wilderness first aid preparedness, strict supervision standards, and ironclad emergency procedures.</p>
+            </div>
+          </div>
+          
+          <div className="registration-card glass">
+            <div className="reg-header">
+              <div className="reg-badge">Next Expedition</div>
+              <h4 className="heading-md" style={{fontSize: '2rem'}}>August 20th &ndash; 23rd</h4>
+              <p className="reg-scarcity">Only 10 Seats Available</p>
+            </div>
+            
+            <div className="reg-body">
+              <div className="reg-price-box">
+                <div className="price-val">$499</div>
+                <div className="price-label">Per Person / All-Inclusive</div>
+              </div>
+              
+              <ul className="reg-details">
+                <li><strong>Full Weekend Experience:</strong> All meals, gear, and lodging included.</li>
+                <li><strong>Cohorts:</strong> Separate groups for 9-12th Graders, College Students, and Adults.</li>
+                <li><strong>Registration:</strong> Advance booking required. A deposit must be paid to secure your spot.</li>
+              </ul>
+              
+              <a href="#contact" className="btn btn-primary w-full mt-4" style={{width: '100%'}}>Secure Your Seat</a>
             </div>
           </div>
         </div>
@@ -170,11 +193,124 @@ export default function Schedule() {
           border-left: 4px solid var(--accent-tertiary);
         }
         
+        .registration-card {
+          border-radius: 16px;
+          display: flex;
+          flex-direction: column;
+          max-width: 900px;
+          margin: 0 auto;
+          overflow: hidden;
+          border: 1px solid rgba(255,107,53,0.2);
+        }
+        
+        .reg-header {
+          background: rgba(255, 107, 53, 0.05);
+          padding: 2.5rem;
+          text-align: center;
+          border-bottom: 1px solid rgba(255,107,53,0.1);
+        }
+        
+        .reg-badge {
+          display: inline-block;
+          background: var(--gradient-ember);
+          color: white;
+          padding: 0.35rem 1rem;
+          border-radius: 50px;
+          font-family: var(--font-heading);
+          font-size: 0.85rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          margin-bottom: 1rem;
+          box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+        }
+        
+        .reg-scarcity {
+          color: var(--accent-primary);
+          font-weight: 600;
+          font-size: 1.1rem;
+          margin-top: 0.5rem;
+        }
+        
+        .reg-body {
+          padding: 2.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+        }
+        
+        .reg-price-box {
+          text-align: center;
+        }
+        
+        .price-val {
+          font-family: var(--font-heading);
+          font-size: 4rem;
+          font-weight: 700;
+          color: var(--text-primary);
+          line-height: 1;
+        }
+        
+        .price-label {
+          text-transform: uppercase;
+          font-size: 0.85rem;
+          letter-spacing: 0.1em;
+          color: var(--text-secondary);
+          margin-top: 0.5rem;
+        }
+        
+        .reg-details {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+        
+        .reg-details li {
+          position: relative;
+          padding-left: 1.5rem;
+          color: var(--text-secondary);
+          line-height: 1.5;
+        }
+        
+        .reg-details li::before {
+          content: '•';
+          position: absolute;
+          left: 0;
+          color: var(--accent-primary);
+          font-size: 1.5rem;
+          line-height: 1;
+          top: -2px;
+        }
+        
+        .reg-details strong {
+          color: var(--text-primary);
+        }
+        
         @media (min-width: 768px) {
           .safety-bar {
             flex-direction: row;
             text-align: left;
             gap: 2.5rem;
+          }
+          
+          .registration-card {
+            flex-direction: row;
+          }
+          
+          .reg-header {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: none;
+            border-right: 1px solid rgba(255,107,53,0.1);
+          }
+          
+          .reg-body {
+            flex: 1.5;
           }
         }
         
