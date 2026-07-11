@@ -98,29 +98,33 @@ img {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 4rem 0;
   position: relative;
 }
 
 @media (min-width: 768px) {
+  .section { padding: 8rem 0; }
+}
+
+@media (min-width: 1024px) {
   .section { padding: 10rem 0; }
 }
 
 .heading-xl {
-  font-size: clamp(3rem, 7vw, 6rem);
-  line-height: 1;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  line-height: 1.05;
   letter-spacing: -0.03em;
   font-weight: 700;
 }
 
 .heading-lg {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.25rem, 6vw, 4rem);
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .heading-md {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   letter-spacing: -0.01em;
 }
 

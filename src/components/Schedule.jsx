@@ -205,7 +205,7 @@ export default function Schedule() {
         
         .reg-header {
           background: rgba(255, 107, 53, 0.05);
-          padding: 2.5rem;
+          padding: 1.5rem;
           text-align: center;
           border-bottom: 1px solid rgba(255,107,53,0.1);
         }
@@ -233,7 +233,7 @@ export default function Schedule() {
         }
         
         .reg-body {
-          padding: 2.5rem;
+          padding: 1.5rem;
           display: flex;
           flex-direction: column;
           gap: 2rem;
@@ -245,7 +245,7 @@ export default function Schedule() {
         
         .price-val {
           font-family: var(--font-heading);
-          font-size: 4rem;
+          font-size: 3rem;
           font-weight: 700;
           color: var(--text-primary);
           line-height: 1;
@@ -302,6 +302,7 @@ export default function Schedule() {
           
           .reg-header {
             flex: 1;
+            padding: 2.5rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -311,6 +312,11 @@ export default function Schedule() {
           
           .reg-body {
             flex: 1.5;
+            padding: 2.5rem;
+          }
+          
+          .price-val {
+            font-size: 4rem;
           }
         }
         

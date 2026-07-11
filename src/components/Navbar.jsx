@@ -13,6 +13,17 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [menuOpen]);
+
   return (
     <nav className={`navbar ${scrolled || menuOpen ? 'scrolled glass-nav' : ''}`}>
       <div className="container nav-content">
